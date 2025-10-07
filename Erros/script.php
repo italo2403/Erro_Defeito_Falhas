@@ -24,7 +24,7 @@ function gerarRelatorio($estoque) {
     foreach ($estoque as $item) {
         $valorTotal = calcularValorTotal($item);
         echo "{$item['nome']} | Qtd: {$item['quantidade']} | Total: R$ $valorTotal\n";
-        if ($item["quantidade"] < 0) echo "⚠ Estoque negativo detectado!\n";
+        if ($item["quantidade"] < 0) echo " Estoque negativo detectado!\n";
     }
     echo "Média de preços: " . calcularMediaPreco($estoque) . "\n";
 }
@@ -61,3 +61,4 @@ function salvarBackup($estoque) {
 }
 
 salvarBackup($estoque);
+
